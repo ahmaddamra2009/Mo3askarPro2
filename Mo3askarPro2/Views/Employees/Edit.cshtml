@@ -1,0 +1,40 @@
+﻿@model Employee
+@{
+    ViewData["Title"] = "Edit Employee";
+}
+
+<h1>Edit Employee</h1>
+
+<form asp-action="Edit" method="post">
+    @Html.HiddenFor(model=>model.EmployeeId)
+    <table class="table table-bordered">
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.EmployeeName)</td>
+            <td>
+                <input asp-for="EmployeeName" class="form-control" placeholder="Enter Employee Name" />
+                <span asp-validation-for="EmployeeName" class="text-danger"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.Email)</td>
+            <td>
+                <input asp-for="Email" class="form-control" placeholder="Enter Employee Email" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(model => model.Country)</td>
+            <td>
+                <input asp-for="Country" class="form-control" placeholder="Enter Employee Country" />
+                <span asp-validation-for="Country" class="text-danger"></span>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" name="name" value="Update" class="btn btn-success" />
+                <a asp-action="Index" class="btn btn-danger" >Cancel</a>
+            </td>
+        </tr>
+    </table>
+</form>
+

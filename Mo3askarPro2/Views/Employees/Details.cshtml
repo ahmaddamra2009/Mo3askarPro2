@@ -1,0 +1,28 @@
+﻿@model Employee
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<table class="table table-bordered table-hover">
+    <tr>
+        <td>@Html.DisplayNameFor(x => x.EmployeeId)</td>
+        <td>@Html.DisplayFor(x => x.EmployeeId)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(x => x.EmployeeName)</td>
+        <td>@Html.DisplayFor(x => x.EmployeeName)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(x => x.Country)</td>
+        <td>@Html.DisplayFor(x => x.Country)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(x => x.Email)</td>
+        <td>@Html.DisplayFor(x => x.Email)</td>
+    </tr>
+</table>
+
+<a asp-action="Index" class="btn btn-info">Back</a>
+
